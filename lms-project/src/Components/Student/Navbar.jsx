@@ -40,10 +40,12 @@ const Navbar = () => {
 
       </div>
       <div className='md:hidden flex item-center gap-2 sm:gap-5 text-grey-500'>
-        <div>
-          <button>Become Educator</button>
-          <Link to='/my-enrollments'> My Enrollments </Link>
-        </div>
+      {user && <>
+            <button>Become Educator</button>
+            <Link to='/my-enrollments'> My Enrollments </Link>
+
+          </>
+          }
         <button> <img src={assets.user_icon} alt="" /> </button>
       </div>
     </div>
