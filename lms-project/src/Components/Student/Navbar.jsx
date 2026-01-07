@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className={`flex items-center justify-between px-4 sm:px-10 md:px-14 1g:px-36 border-b 
     border-gray-500 py-4 ${inCourseListPage ? 'bg-white' : 'bg-cyan-100/70'}`}>
-      
+
       <img src={assets.logo} alt="Logo" className='w-28 lg:w-32 cursor-pointer' />
       <div className='hidden md:flex items-center gap-5 text-gray-500'>
         <div className='flex items-center gap-5'>
@@ -39,14 +39,25 @@ const Navbar = () => {
 
 
       </div>
+      {/* For Phone screens*/}
       <div className='md:hidden flex item-center gap-2 sm:gap-5 text-grey-500'>
-      {user && <>
+        <div className='flex items-center gap-2 sm:gap-2 max-sm:text-xs'>
+
+
+
+          {user && <>
             <button>Become Educator</button>
             <Link to='/my-enrollments'> My Enrollments </Link>
 
           </>
           }
-        <button> <img src={assets.user_icon} alt="" /> </button>
+        </div>
+        {
+          user ? <UserButton /> :
+            <button onClick={()=> openSignIn}> <img src={assets.user_icon} alt="" /> </button>
+        }
+
+
       </div>
     </div>
   )
