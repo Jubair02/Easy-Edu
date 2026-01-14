@@ -106,6 +106,8 @@ const CourseDetails = () => {
             <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
               <div className="px-6 py-4 border-b border-gray-100 bg-gray-50/50">
                 <h2 className="text-xl font-bold text-gray-900">Course Structure</h2>
+
+                
                 <p className="text-sm text-gray-500 mt-1">
                   {courseData.courseContent?.length || 0} chapters • {calculateNoOfLectures(courseData)} lectures • {calculateCourseDuration(courseData)} total length
                 </p>

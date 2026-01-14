@@ -16,6 +16,8 @@ import humanizeDuration from "humanize-duration";
 
      const [isEducator,setIsEducator] =useState(true)
 
+     const [enrolledCourses,setEnrolledCourses] =useState([])
+
     //fetch All Courses
     const fetchAllCourses =async () => {
       setAllCourses(dummyCourses)
@@ -59,15 +61,23 @@ import humanizeDuration from "humanize-duration";
       return totalLectures;
     }
 
+    //Fetch User Enrolled Courses
+
+    const fetchUserEnrolledCourses = async ()=>{
+      setEnrolledCourses(dummyCourses)
+    }
+
     useEffect(()=> {
       fetchAllCourses()
+      fetchUserEnrolledCourses()
     },[])
 
     const currency = import.meta.env.VITE_CURRENCY
 
     const value = {
       currency,allCourses,navigate,calcultateRating,isEducator,setIsEducator,
-      calculateNoOfLectures,calculateCourseDuration,calculateChapterTime
+      calculateNoOfLectures,calculateCourseDuration,calculateChapterTime,
+      enrolledCourses ,fetchUserEnrolledCourses
     } 
     
     return (
