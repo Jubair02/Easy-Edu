@@ -22,7 +22,7 @@ const Navbar = () => {
         
         {/* --- Logo --- */}
         <img
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/Easy-Edu')}
           src={assets.logo}
           alt="Logo"
           className="w-28 lg:w-32 cursor-pointer transition-transform hover:scale-105 duration-200"
