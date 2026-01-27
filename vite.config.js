@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [tailwindcss()],
-  base: "/",
+  base: "/Easy-Edu",
   build: {
     chunkSizeWarningLimit: 1000,
     rollupOptions: {

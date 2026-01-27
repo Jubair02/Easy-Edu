@@ -31,7 +31,7 @@ const App = () => {
       { !inEducatorRoute &&   <Navbar />}    
   
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/Easy-Edu' element={<Home />} />
         <Route path='/course-list' element={<CoursesList />} />
         <Route path='/course-list/:input' element={<CoursesList />} />
         <Route path='/course/:id' element={<CourseDetails />} />
